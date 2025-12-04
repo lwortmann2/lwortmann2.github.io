@@ -1,0 +1,17 @@
+{
+  "hash": "e3600db1ccf9f21b966d596c781f4163",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Lincoln Christian Girls Basketball\"\nauthor: \"Lukas Wortmann\"\ndate: '2025-12-03'\ncategories: [Basketbal,Girls,Nebraksa]\nimage: \"image.png\"\nformat: \n  html:\n    code-fold: true\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(ggalt)\nlibrary(ggtext)\n\nGBasketballstats <- read_csv(\"~/LukasSports/lukassportsblog/posts/lincolnchristiangirlsbasketball/GBasketballstats.csv\")\n\nNationalavg_csv <- read_csv(\"~/LukasSports/lukassportsblog/posts/lincolnchristiangirlsbasketball/Nationalavg.csv.csv\")\n\nNationalavg_csv <- read_csv(\n  \"~/LukasSports/lukassportsblog/posts/lincolnchristiangirlsbasketball/Nationalavg.csv.csv\"\n)\n\n# First column = team/category\ncategory_col <- names(Nationalavg_csv)[1]\n\n# Convert all stats to long format\nlong <- Nationalavg_csv %>%\n  pivot_longer(\n    cols = -all_of(category_col),\n    names_to = \"Stat\",\n    values_to = \"Value\"\n  )\n\n# Plot: regular stacked bar chart\nggplot(long, aes(\n  x = .data[[category_col]],\n  y = Value,\n  fill = Stat\n)) +\n  geom_col() +\n  labs(\n    title = \"Stacked Bar Chart of All Stats\",\n    x = category_col,\n    y = \"Value\",\n    fill = \"Statistic\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(size = 18, face = \"bold\", hjust = 0.5)\n  )\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nteam_col <- names(Nationalavg_csv)[1]\n\n# Convert wide → long\nlong <- Nationalavg_csv %>%\n  pivot_longer(\n    cols = -all_of(team_col),\n    names_to = \"Stat\",\n    values_to = \"Value\"\n  )\n\n# Double bar chart (side-by-side bars)\nggplot(long, aes(\n  x = .data[[team_col]],\n  y = Value,\n  fill = .data[[team_col]]\n)) +\n  geom_col(position = \"dodge\") +\n  facet_wrap(~ Stat, scales = \"free_y\") +\n  labs(\n    title = \"Double Bar Chart: Teams Compared Across All Stats\",\n    x = \"Team\",\n    y = \"Value\",\n    fill = \"Team\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(size = 18, face = \"bold\", hjust = 0.5),\n    axis.text.x = element_text(angle = 45, hjust = 1)\n  )\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
