@@ -319,26 +319,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"Value"</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(nationalavg_long, <span class="fu">aes</span>(<span class="at">x =</span> Team, <span class="at">y =</span> Value, <span class="at">fill =</span> Team)) <span class="sc">+</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Stat, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Lincoln Christian"</span> <span class="ot">=</span> <span class="st">"#005596"</span>,  </span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"National Average"</span> <span class="ot">=</span> <span class="st">"grey"</span>      </span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">+</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"How Did the Crusaders Stack up Against the National Average"</span>,</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Stats from 2024-2025"</span>,</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Team"</span>,</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Value"</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">40</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(nationalavg_long, <span class="fu">aes</span>(<span class="at">x =</span> Team, <span class="at">y =</span> Value, <span class="at">fill =</span> Team)) <span class="sc">+</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Stat, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Lincoln Christian"</span> <span class="ot">=</span> <span class="st">"#005596"</span>,  </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"National Average"</span> <span class="ot">=</span> <span class="st">"grey"</span>      </span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">+</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"How Did the Crusaders Stack up Against the National Average"</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Stats from 2024-2025"</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Team"</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Value"</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">40</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -348,6 +347,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<p>When a player is not having their best day and they are not knocking down shots, taking easier shots and being diverse, while knowing that everyone can do everything is something Hueser says the team will look for this season.</p>
+<p>Junior Sam Dearking was able to convert on 49 percent of her shots last season which is the highest on the team amongst returning players. Dearking says that she wants to improve her confidence from last season, and she wants to be able to make more plays happen instead of waiting for them to come to her.</p>
+<p>“I feel like last year I definitely didn’t have as much confidence as I do this year, so I would only take, like, wide, wide open shots,” Deaking said. “I want to make sure I head into this season not feeling like I have to shoot a bunch, So probably just taking smart shots, but knowing, I am going to have to have a more dominant role than I did last year.”</p>
+<p>Taking closer shots and moving more towards the basket allows for a lot of different options. You can drive and kick, shoot higher percentage shots, and draw fouls to allow for more free-throw attempts.</p>
+<p>“Somebody will always be hitting their shots, and even if they’re not there’s always the ability of driving in and getting to the free throw line,” Senior Maci Pittenger said, “We have a lot of good shooters this year, so driving and kicking would be a really effective way.”</p>
+<p>The Crusaders shot a high percentage from the free throw line last season, prioritizing that aspect will be a good way to get free points and high quality shots when it comes to putting point on the board</p>
+<p>Below is how well some of the Crusaders players stacked up among free-throw shooters last season.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -426,43 +432,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">rows =</span> Name <span class="sc">==</span> <span class="st">"Jessa Hueser"</span>)</span>
 <span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>  <span class="do">#### Title/subtitle styling</span></span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="st">"x-large"</span>),</span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_title</span>(<span class="at">groups =</span> <span class="st">"title"</span>)</span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"#383838"</span>, <span class="at">style =</span> <span class="st">"italic"</span>),</span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_title</span>(<span class="at">groups =</span> <span class="st">"subtitle"</span>)</span>
-<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>  <span class="do">#### Footer</span></span>
-<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_source_note</span>(</span>
-<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>    <span class="at">source_note =</span> <span class="fu">md</span>(<span class="st">"**By:** Lukas Wortmann | **Source:** Maxpreps"</span>)</span>
-<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_table_lines</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="st">"x-large"</span>),</span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_title</span>(<span class="at">groups =</span> <span class="st">"title"</span>)</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"#383838"</span>, <span class="at">style =</span> <span class="st">"italic"</span>),</span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_title</span>(<span class="at">groups =</span> <span class="st">"subtitle"</span>)</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_source_note</span>(</span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>    <span class="at">source_note =</span> <span class="fu">md</span>(<span class="st">"**By:** Lukas Wortmann | **Source:** Maxpreps"</span>)</span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_table_lines</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
-<div id="hvxnvkfrqf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#hvxnvkfrqf table {
+<div id="ktoxdzoqbj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ktoxdzoqbj table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#hvxnvkfrqf thead, #hvxnvkfrqf tbody, #hvxnvkfrqf tfoot, #hvxnvkfrqf tr, #hvxnvkfrqf td, #hvxnvkfrqf th {
+#ktoxdzoqbj thead, #ktoxdzoqbj tbody, #ktoxdzoqbj tfoot, #ktoxdzoqbj tr, #ktoxdzoqbj td, #ktoxdzoqbj th {
   border-style: none;
 }
 
-#hvxnvkfrqf p {
+#ktoxdzoqbj p {
   margin: 0;
   padding: 0;
 }
 
-#hvxnvkfrqf .gt_table {
+#ktoxdzoqbj .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -488,12 +492,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #E31B23;
 }
 
-#hvxnvkfrqf .gt_caption {
+#ktoxdzoqbj .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#hvxnvkfrqf .gt_title {
+#ktoxdzoqbj .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -505,7 +509,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#hvxnvkfrqf .gt_subtitle {
+#ktoxdzoqbj .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -517,7 +521,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#hvxnvkfrqf .gt_heading {
+#ktoxdzoqbj .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -529,13 +533,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#hvxnvkfrqf .gt_bottom_border {
+#ktoxdzoqbj .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#hvxnvkfrqf .gt_col_headings {
+#ktoxdzoqbj .gt_col_headings {
   border-top-style: solid;
   border-top-width: 10px;
   border-top-color: #E31B23;
@@ -550,7 +554,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#hvxnvkfrqf .gt_col_heading {
+#ktoxdzoqbj .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -570,7 +574,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#hvxnvkfrqf .gt_column_spanner_outer {
+#ktoxdzoqbj .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -582,15 +586,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#hvxnvkfrqf .gt_column_spanner_outer:first-child {
+#ktoxdzoqbj .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#hvxnvkfrqf .gt_column_spanner_outer:last-child {
+#ktoxdzoqbj .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#hvxnvkfrqf .gt_column_spanner {
+#ktoxdzoqbj .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 10px;
   border-bottom-color: #E31B23;
@@ -602,11 +606,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#hvxnvkfrqf .gt_spanner_row {
+#ktoxdzoqbj .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#hvxnvkfrqf .gt_group_heading {
+#ktoxdzoqbj .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -632,7 +636,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#hvxnvkfrqf .gt_empty_group_heading {
+#ktoxdzoqbj .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -647,15 +651,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#hvxnvkfrqf .gt_from_md > :first-child {
+#ktoxdzoqbj .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#hvxnvkfrqf .gt_from_md > :last-child {
+#ktoxdzoqbj .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#hvxnvkfrqf .gt_row {
+#ktoxdzoqbj .gt_row {
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 5px;
@@ -674,7 +678,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#hvxnvkfrqf .gt_stub {
+#ktoxdzoqbj .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -687,7 +691,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#hvxnvkfrqf .gt_stub_row_group {
+#ktoxdzoqbj .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -701,15 +705,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#hvxnvkfrqf .gt_row_group_first td {
+#ktoxdzoqbj .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#hvxnvkfrqf .gt_row_group_first th {
+#ktoxdzoqbj .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#hvxnvkfrqf .gt_summary_row {
+#ktoxdzoqbj .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -719,16 +723,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#hvxnvkfrqf .gt_first_summary_row {
+#ktoxdzoqbj .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#hvxnvkfrqf .gt_first_summary_row.thick {
+#ktoxdzoqbj .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#hvxnvkfrqf .gt_last_summary_row {
+#ktoxdzoqbj .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -738,7 +742,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#hvxnvkfrqf .gt_grand_summary_row {
+#ktoxdzoqbj .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -748,7 +752,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#hvxnvkfrqf .gt_first_grand_summary_row {
+#ktoxdzoqbj .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -758,7 +762,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#hvxnvkfrqf .gt_last_grand_summary_row_top {
+#ktoxdzoqbj .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -768,11 +772,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#hvxnvkfrqf .gt_striped {
+#ktoxdzoqbj .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#hvxnvkfrqf .gt_table_body {
+#ktoxdzoqbj .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -781,7 +785,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#hvxnvkfrqf .gt_footnotes {
+#ktoxdzoqbj .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: solid;
@@ -795,7 +799,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#hvxnvkfrqf .gt_footnote {
+#ktoxdzoqbj .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -804,7 +808,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#hvxnvkfrqf .gt_sourcenotes {
+#ktoxdzoqbj .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: solid;
@@ -818,7 +822,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#hvxnvkfrqf .gt_sourcenote {
+#ktoxdzoqbj .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -826,72 +830,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#hvxnvkfrqf .gt_left {
+#ktoxdzoqbj .gt_left {
   text-align: left;
 }
 
-#hvxnvkfrqf .gt_center {
+#ktoxdzoqbj .gt_center {
   text-align: center;
 }
 
-#hvxnvkfrqf .gt_right {
+#ktoxdzoqbj .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#hvxnvkfrqf .gt_font_normal {
+#ktoxdzoqbj .gt_font_normal {
   font-weight: normal;
 }
 
-#hvxnvkfrqf .gt_font_bold {
+#ktoxdzoqbj .gt_font_bold {
   font-weight: bold;
 }
 
-#hvxnvkfrqf .gt_font_italic {
+#ktoxdzoqbj .gt_font_italic {
   font-style: italic;
 }
 
-#hvxnvkfrqf .gt_super {
+#ktoxdzoqbj .gt_super {
   font-size: 65%;
 }
 
-#hvxnvkfrqf .gt_footnote_marks {
+#ktoxdzoqbj .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#hvxnvkfrqf .gt_asterisk {
+#ktoxdzoqbj .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#hvxnvkfrqf .gt_indent_1 {
+#ktoxdzoqbj .gt_indent_1 {
   text-indent: 5px;
 }
 
-#hvxnvkfrqf .gt_indent_2 {
+#ktoxdzoqbj .gt_indent_2 {
   text-indent: 10px;
 }
 
-#hvxnvkfrqf .gt_indent_3 {
+#ktoxdzoqbj .gt_indent_3 {
   text-indent: 15px;
 }
 
-#hvxnvkfrqf .gt_indent_4 {
+#ktoxdzoqbj .gt_indent_4 {
   text-indent: 20px;
 }
 
-#hvxnvkfrqf .gt_indent_5 {
+#ktoxdzoqbj .gt_indent_5 {
   text-indent: 25px;
 }
 
-#hvxnvkfrqf .katex-display {
+#ktoxdzoqbj .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#hvxnvkfrqf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ktoxdzoqbj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
